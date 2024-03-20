@@ -1,0 +1,123 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: 900px) {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .gradientHeader_inner {
+        font-weight: 700;
+        letter-spacing: 0px;
+    }
+
+    &_links {
+        width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+
+        position: relative;
+        // backdrop-filter: blur(10px);
+
+        @media(max-width: 900px) {
+            width: 50%;
+            order: 1;
+        }
+
+        @media(max-width: 550px) {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &_header {
+            width: 100%;
+            color: #9F9F9F;
+            border-left: 2px solid white;
+            padding: 15px 0px;
+            padding-left: 30px;
+            font-size: 24px;
+            text-shadow: 0px 0px 4px black;
+            margin-bottom: 14px;
+        }
+
+        &_element {
+            margin-top: 20px;
+            width: 100%;
+            font-size: 24px;
+            font-weight: 500;
+            padding-left: 30px;
+            transition: 200ms text-shadow;
+            text-shadow: 0px 0px 4px black;
+        }
+
+        &_element:hover {
+            text-shadow: 0px 0px 20px white;
+            opacity: 1;
+        }
+    }
+
+    &_logoAndMedia {
+        width: 50%;
+
+        @media(max-width: 900px) {
+            order: 2;
+            margin-top: 30px;
+        }
+
+        &_logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 700;
+            font-size: 30px;
+
+            @media(max-width: 450px) {
+                font-size: 22px;
+            }
+        }
+
+        &_slag {
+            margin-top: 25px;
+            max-width: 260px;
+            font-size: 16px;
+        }
+
+        &_media {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+
+            &_element {
+                transition: 200ms filter;
+            }
+
+            &_element:hover {
+                opacity: 1;
+                filter: drop-shadow(0px 0px 15px white);
+            }
+
+            img {
+                height: 27px;
+            }
+        }
+
+    }
+
+    &_wrapper {
+        padding-bottom: 80px;
+        width: 100%;
+        margin-bottom: 85px;
+        border-bottom: 1px dashed #393C58;
+        margin-top: 400px;
+
+        @media(max-width: 1200px) {
+            margin-top: 60px;
+        }
+
+        @media(max-width: 550px) {
+            border-bottom: 0px dashed #393C58;
+            margin-bottom: 0px;
+        }
+    }
+}

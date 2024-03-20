@@ -1,0 +1,111 @@
+.aboutUs {
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media(max-width: 900px) {
+        margin-top: 170px;
+    }
+
+    &_header {
+        width: 100%;
+        text-align: center;
+        margin-top: 60px;
+        font-size: 45px;
+        font-weight: 600;
+
+        @media(max-width: 1000px) {
+            font-size: 36px;
+            margin-top: 24px;
+        }
+
+        @media(max-width: 360px) {
+            font-size: 32px;
+        }
+    }
+
+    &_list {
+        margin-top: 60px;
+        display: flex;
+        gap: 36px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media(max-width: 650px) {
+            margin-top: 40px;
+            gap: 40px;
+
+        }
+
+        &_element {
+            border: 1px solid #46A6FF;
+            border-radius: 30px;
+            padding: 32px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 489px;
+            position: relative;
+            z-index: 0;
+            transition: 300ms box-shadow;
+
+            @media(max-width: 400px) {
+
+                padding: 20px;
+            }
+
+            &_img {
+                height: 80px;
+
+                @media(max-width: 650px) {
+                    height: 50px;
+                    margin-top: 20px;
+                }
+
+                img {
+                    height: 80px;
+
+                    @media(max-width: 650px) {
+                        height: 50px;
+                    }
+                }
+            }
+
+            &_header {
+                font-size: 44px;
+                font-weight: 700;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+
+                @media(max-width: 550px) {
+                    font-size: 30px;
+                }
+
+                span {
+                    color: #8EE6FF;
+                }
+            }
+
+            &_p {
+                font-size: 24px;
+                text-align: center;
+                margin-top: 12px;
+
+                @media(max-width: 550px) {
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+        &_element:hover {
+            position: relative;
+            z-index: 1;
+            box-shadow: 0px 0px 200px #47BFF988;
+        }
+    }
+}

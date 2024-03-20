@@ -1,0 +1,133 @@
+.bg {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    background-color: #010101;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_line {
+        width: 1px;
+        border-right: 1px dashed #393C58;
+        height: 100dvh;
+
+        &_transparent {
+            opacity: 0;
+        }
+
+        @media(max-width: 650px) {
+            display: none;
+        }
+    }
+
+
+}
+
+.bg_fixer {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_line {
+        width: 1px;
+        height: 0;
+
+        &_transparent {
+            opacity: 0;
+        }
+
+        @media(max-width: 650px) {
+            display: none;
+        }
+    }
+
+    &_line:nth-child(4) {
+        height: 120px;
+        border: 1px solid black;
+
+        @media(max-width: 1200px) {
+            height: 60px;
+        }
+
+        @media(max-width: 1000px) {
+            height: 90px;
+        }
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.app {
+    width: 100%;
+    min-height: 100dvh;
+    overflow: hidden;
+    position: absolute;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+
+.gradientHeader {
+    background-color: black;
+    border-radius: 10px;
+
+    &_inner {
+        text-transform: uppercase;
+        background: linear-gradient(180deg, rgba(208, 255, 255, 0.9) 0%, rgba(163, 194, 255, 0.52) 100%);
+        text-align: center;
+        -webkit-background-clip: text;
+        /* для Safari */
+        background-clip: text;
+        color: transparent;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2.4px;
+        // border: 0.2px solid #339DFF;
+        display: inline-block;
+        padding: 4px 20px;
+
+        @media(max-width: 700px) {
+            font-size: 18px;
+        }
+    }
+
+
+    &_wrapper {
+        padding: 1px;
+        border-radius: 10px;
+        display: inline-block;
+        // background-color: #0008;
+        background: linear-gradient(to bottom, #51C3FC, #339DFF);
+    }
+
+}
+
+
+.ddOpen {
+    grid-template-rows: 1fr !important;
+}
+
+
+.openerOpen {
+    transform: rotate(90deg);
+}

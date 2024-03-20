@@ -1,0 +1,132 @@
+.seedRound {
+    margin-top: 120px;
+
+    &_inner {
+        width: 50%;
+
+        @media(max-width: 1000px) {
+            width: 100%;
+            margin-top: 100px;
+        }
+    }
+
+    &_header {
+        font-size: 64px;
+        font-weight: 600;
+        margin-top: 45px;
+
+        @media(max-width: 650px) {
+            font-size: 36px;
+        }
+    }
+
+    &_apply {
+        margin-top: 120px;
+        font-size: 64px;
+        border: 1px solid #41AFFE;
+        width: 100%;
+        max-width: 400px;
+        height: 150px;
+        font-weight: 500;
+        background-color: black;
+        border-radius: 15px;
+        margin-bottom: 120px;
+        transition: 200ms background-color, 200ms color;
+
+        @media(max-width: 700px) {
+            margin-top: 60px;
+            margin-bottom: 60px;
+            font-size: 25px;
+            width: 160px;
+            height: 60px;
+        }
+    }
+
+    &_apply:hover {
+        cursor: pointer;
+        background-color: #A8E3FF;
+        color: black;
+    }
+
+    &_inputBlock {
+        margin-top: 120px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media(max-width: 700px) {
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        &_label {
+            width: 100%;
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 20px;
+
+            @media(max-width: 700px) {
+                margin-bottom: 0px;
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+
+
+        input {
+            margin-top: 60px;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 25, 37, 1) 100%);
+            height: 100px;
+            border-radius: 15px;
+            transition: border 200ms, 200ms background;
+            border: 1px solid #41AFFE;
+            color: white;
+            font-size: 30px;
+            padding: 0px 20px;
+
+            @media(max-width: 700px) {
+                height: 40px;
+                margin-top: 24px;
+                border-radius: 6px;
+            }
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid white;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(#004D72, 1) 100%);
+
+
+        }
+
+        button {
+            border: 1px solid #47BFF9;
+            background-color: black;
+            width: 460px;
+            height: 90px;
+            margin-top: 30px;
+            font-size: 40px;
+            border-radius: 15px;
+            transition: 200ms background-color, 200ms color;
+
+            @media(max-width: 700px) {
+                margin-top: 20px;
+                font-size: 22px;
+                height: 50px;
+                width: 250px;
+            }
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #A8E3FF;
+            color: black;
+        }
+
+        .selected {
+            cursor: pointer;
+            background-color: #A8E3FF;
+            color: black;
+        }
+    }
+}

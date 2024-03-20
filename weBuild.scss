@@ -1,0 +1,155 @@
+.weBuild {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: 1300px) {
+        flex-wrap: wrap;
+    }
+
+    @media(max-width: 700px) {
+        margin-top: 100px;
+    }
+
+    &_mobDecor {
+        display: none;
+
+        @media(max-width: 1300px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    .gradientHeader_inner {
+        font-weight: 700;
+        letter-spacing: 0px;
+    }
+
+    &_content {
+        width: 100%;
+    }
+
+    &_header {
+        width: 100%;
+        margin-top: 60px;
+        font-size: 45px;
+        font-weight: 700;
+        letter-spacing: .5px;
+
+        @media(max-width: 700px) {
+            margin-top: 24px;
+            font-size: 36px;
+        }
+    }
+
+    &_decor {
+        height: 800px;
+        display: flex;
+        align-items: center;
+        padding-right: 1px;
+
+        @media(max-width: 1300px) {
+            display: none;
+        }
+
+        .free_img {
+            justify-content: right;
+        }
+    }
+
+    &_list {
+        margin-top: 80px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 60px;
+
+        @media(max-width: 1300px) {
+            width: 100%;
+        }
+
+        @media(max-width: 650px) {
+            margin-top: 50px;
+            row-gap: 40px;
+        }
+
+        &_element {
+            width: 50%;
+            padding-right: 40px;
+
+            @media(max-width: 650px) {
+                width: 100%;
+                padding-right: 0px;
+            }
+
+            &_delimeter {
+                border-bottom: 1px dashed #393C58;
+                width: 100%;
+            }
+
+            &_header {
+                font-size: 36px;
+                font-weight: 600;
+                padding-left: 22px;
+                border-left: 2px solid white;
+                display: flex;
+                justify-content: space-between;
+
+                @media(max-width: 650px) {
+                    font-size: 32px;
+                    line-height: 24px;
+                    font-weight: 500;
+                }
+
+                img {
+                    display: none;
+                    width: 20px;
+                    transition: transform 300ms;
+
+                    @media(max-width: 650px) {
+                        display: block;
+                    }
+                }
+            }
+
+
+            &_p {
+                padding-left: 22px;
+                margin-top: 20px;
+                font-size: 20px;
+
+                @media(max-width: 650px) {
+                    display: grid;
+                    grid-template-rows: 0fr;
+                    transition: grid-template-rows 300ms;
+                    overflow: hidden;
+                }
+
+                &_wrapper {
+                    min-height: 0px;
+                }
+
+            }
+
+        }
+
+    }
+
+
+    .weBuild_decor_img {
+        transition: filter 300ms;
+    }
+
+}
+
+
+.weBuild:hover {
+
+    .weBuild_decor_img {
+        filter: drop-shadow(0px 0px 50px rgba(#09356A, 1));
+        /* Тень */
+    }
+}
